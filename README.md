@@ -44,7 +44,7 @@ Um sistema completo e avançado de tickets para servidores Minecraft, desenvolvi
 
 ## 📦 Instalação
 
-1. **Baixe** o arquivo `DevTicket-2.0.jar`
+1. **Baixe** o arquivo `DevTicket.jar`
 2. **Coloque** na pasta `plugins` do seu servidor
 3. **Reinicie** o servidor
 4. **Configure** o arquivo `config.yml` conforme necessário
@@ -134,7 +134,7 @@ database:
 
 ## 🔧 API para Desenvolvedores
 
-O DevTicket v2.0 oferece uma API completa para integração com outros plugins:
+O DevTicket oferece uma API completa para integração com outros plugins:
 
 ```java
 // Obter instância da API
@@ -263,4 +263,4 @@ Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICE
 
 **Desenvolvido com ❤️ por DevPlugins**
 
-*DevTicket v2.0 - Transformando o suporte do seu servidor!*
+*DevTicket - Transformando o suporte do seu servidor!*
