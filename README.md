@@ -1,36 +1,266 @@
-# Plugins-Minecraft
+# DevTicket v2.0 - Sistema Avançado de Tickets
 
-## Sobre a DevPlugins
+![DevTicket Logo](https://img.shields.io/badge/DevTicket-v2.0-blue.svg)
+![Minecraft](https://img.shields.io/badge/Minecraft-1.18.2-green.svg)
+![Java](https://img.shields.io/badge/Java-17-orange.svg)
 
-Bem-vindo ao repositorio oficial da **DevPlugins**, uma empresa dedicada a criar plugins inovadores e de alta qualidade para a comunidade de Minecraft. Nosso foco e em performance, estabilidade e recursos que melhoram a experiencia de jogo e facilitam a gestao de servidores.
+Um sistema completo e avançado de tickets para servidores Minecraft, desenvolvido para oferecer suporte eficiente aos jogadores com interface moderna e recursos profissionais.
 
-Acreditamos que um bom plugin e aquele que funciona de forma eficiente, e facil de configurar e oferece solucoes reais para os desafios de quem administra um servidor.
+## 🚀 Características Principais
 
-## Nossos Plugins em Destaque
+### ✨ Interface Moderna
+- **GUI Interativa**: Interface gráfica intuitiva e moderna
+- **Navegação Fluida**: Menus organizados e fáceis de usar
+- **Design Responsivo**: Adaptável a diferentes necessidades
 
-Aqui esta uma lista dos nossos principais projetos. Para saber mais sobre cada um, clique no nome do plugin.
+### 🗄️ Sistema de Banco de Dados
+- **SQLite**: Banco local para servidores pequenos/médios
+- **MySQL**: Suporte para servidores grandes com banco remoto
+- **Pool de Conexões**: Gerenciamento eficiente com HikariCP
+- **Backup Automático**: Proteção dos dados
 
-### [DevTicket](/DevTicket)
-Um sistema de tickets completo e intuitivo para servidores Spigot. Permite que jogadores relatem problemas, denunciem infratores e solicitem suporte de forma rapida e organizada, com uma interface grafica imersiva.
+### 📋 Categorias e Prioridades
+- **Categorias Personalizáveis**: Suporte Técnico, Denúncias, Sugestões, Bug Reports
+- **Sistema de Prioridades**: Baixa, Média, Alta, Urgente
+- **Roteamento Inteligente**: Direcionamento automático por categoria
 
-### DevChat (Em desenvolvimento)
-Otimize o chat do seu servidor com filtros inteligentes, formatos personalizaveis e um sistema de mensagens privadas robusto, garantindo uma comunicacao limpa e eficiente.
+### 👥 Gerenciamento Avançado
+- **Atribuição de Tickets**: Sistema de responsabilidade por staff
+- **Status Dinâmicos**: Aberto, Em Andamento, Fechado
+- **Histórico Completo**: Rastreamento de todas as ações
+- **Sistema de Comentários**: Comunicação em tempo real
 
-### DevEconomy (Em desenvolvimento)
-Uma solucao de economia completa para o seu servidor, com suporte a multiplas moedas, um sistema de lojas e protecoes contra fraudes, tudo integrado para uma experiencia segura.
+### 🔔 Notificações Inteligentes
+- **Alertas para Staff**: Notificações de novos tickets
+- **Integração Discord**: Webhooks para notificações externas
+- **Tickets Antigos**: Alertas para tickets sem resposta
+- **Fechamento Automático**: Limpeza de tickets inativos
 
-## Por Que Escolher a DevPlugins?
+### 🛡️ Segurança e Controle
+- **Sistema de Cooldown**: Prevenção de spam
+- **Limites por Jogador**: Controle de quantidade de tickets
+- **Permissões Granulares**: Controle detalhado de acesso
+- **Logs Completos**: Auditoria de todas as ações
 
-* **Qualidade e Eficiencia:** Nossos plugins sao desenvolvidos com foco em performance, garantindo que nao havera lentidao no seu servidor.
-* **Suporte Dedicado:** Oferecemos suporte completo e estamos sempre dispostos a ouvir a comunidade para melhorar nossos projetos.
-* **Inovacao Constante:** Estamos sempre atualizando nossos plugins para as versoes mais recentes do Minecraft e adicionando novos recursos com base no feedback dos usuarios.
+## 📦 Instalação
 
-## Comunidade e Contato
+1. **Baixe** o arquivo `DevTicket-2.0.jar`
+2. **Coloque** na pasta `plugins` do seu servidor
+3. **Reinicie** o servidor
+4. **Configure** o arquivo `config.yml` conforme necessário
+5. **Pronto!** O plugin está funcionando
 
-Junte-se a nossa comunidade e fique por dentro de todas as novidades! Voce pode dar sugestoes, reportar bugs ou apenas conversar com outros desenvolvedores e administradores.
+## ⚙️ Configuração
 
-**[Entre no nosso Discord!](https://discord.gg/A4F9jtGhFU)**
+### Configuração Básica (config.yml)
 
-## Como Contribuir
+```yaml
+# Configurações do Banco de Dados
+database:
+  type: "sqlite" # sqlite ou mysql
+  host: "localhost"
+  port: 3306
+  database: "devticket"
+  username: "root"
+  password: ""
 
-Valorizamos o poder da colaboracao! Se voce e desenvolvedor e deseja contribuir, sinta-se a vontade para fazer um "pull request" no projeto. Aceitamos relatorios de bugs e sugestoes de novas funcionalidades.
+# Configurações de Tickets
+tickets:
+  max-per-player: 5
+  cooldown-seconds: 300
+  auto-close-days: 7
+  categories:
+    - "Suporte Técnico"
+    - "Denúncia"
+    - "Sugestão"
+    - "Bug Report"
+
+# Notificações Discord
+notifications:
+  discord:
+    enabled: false
+    webhook-url: "https://discord.com/api/webhooks/..."
+```
+
+### Configuração MySQL
+
+Para usar MySQL, altere as configurações do banco:
+
+```yaml
+database:
+  type: "mysql"
+  host: "seu-host-mysql"
+  port: 3306
+  database: "devticket"
+  username: "seu-usuario"
+  password: "sua-senha"
+  pool-size: 10
+```
+
+## 🎮 Comandos
+
+### Comandos para Jogadores
+```
+/ticket                           - Abrir menu principal
+/ticket create <categoria> <título> [descrição] - Criar ticket
+/ticket list                      - Ver seus tickets
+/ticket view <id>                 - Ver detalhes do ticket
+/ticket comment <id> <mensagem>   - Adicionar comentário
+```
+
+### Comandos para Staff
+```
+/ticket list <jogador>            - Ver tickets de um jogador
+/ticket assign <id> <staff>       - Atribuir ticket
+/ticket close <id> [motivo]       - Fechar ticket
+/ticket reopen <id>               - Reabrir ticket
+```
+
+### Comandos para Administradores
+```
+/ticket stats                     - Ver estatísticas
+/ticket reload                    - Recarregar configuração
+```
+
+## 🔐 Permissões
+
+| Permissão | Descrição | Padrão |
+|-----------|-----------|---------|
+| `devticket.create` | Criar tickets | `true` |
+| `devticket.view.own` | Ver próprios tickets | `true` |
+| `devticket.view.all` | Ver todos os tickets | `op` |
+| `devticket.manage` | Gerenciar tickets (staff) | `op` |
+| `devticket.admin` | Acesso administrativo | `op` |
+
+## 🔧 API para Desenvolvedores
+
+O DevTicket v2.0 oferece uma API completa para integração com outros plugins:
+
+```java
+// Obter instância da API
+TicketAPI api = DevTicket.getInstance().getTicketAPI();
+
+// Criar ticket programaticamente
+api.createTicket(player, "Título", "Conteúdo", "Categoria", "Prioridade")
+   .thenAccept(ticket -> {
+       if (ticket != null) {
+           // Ticket criado com sucesso
+       }
+   });
+
+// Obter tickets de um jogador
+api.getPlayerTickets(playerUUID)
+   .thenAccept(tickets -> {
+       // Processar lista de tickets
+   });
+
+// Escutar eventos
+@EventHandler
+public void onTicketCreate(TicketCreateEvent event) {
+    Ticket ticket = event.getTicket();
+    Player player = event.getPlayer();
+    // Processar criação de ticket
+}
+```
+
+### Eventos Disponíveis
+- `TicketCreateEvent` - Quando um ticket é criado
+- `TicketCloseEvent` - Quando um ticket é fechado
+- `TicketAssignEvent` - Quando um ticket é atribuído
+- `TicketCommentEvent` - Quando um comentário é adicionado
+
+## 📊 Recursos Avançados
+
+### Sistema de Estatísticas
+- Total de tickets criados
+- Tickets por categoria
+- Tempo médio de resolução
+- Performance da equipe
+
+### Integração Discord
+Configure webhooks para receber notificações:
+1. Crie um webhook no seu servidor Discord
+2. Cole a URL no `config.yml`
+3. Ative as notificações desejadas
+
+### Fechamento Automático
+Tickets antigos são fechados automaticamente após o período configurado, mantendo o sistema organizado.
+
+## 🛠️ Desenvolvimento
+
+### Estrutura do Projeto
+```
+DevTicket/
+├── src/main/java/me/devplugins/
+│   ├── api/                    # API pública
+│   ├── commands/               # Comandos
+│   ├── config/                 # Configuração
+│   ├── database/               # Banco de dados
+│   ├── gui/                    # Interface gráfica
+│   ├── integrations/           # Integrações externas
+│   ├── listeners/              # Event listeners
+│   ├── manager/                # Gerenciadores
+│   └── model/                  # Modelos de dados
+└── src/main/resources/
+    ├── config.yml              # Configuração padrão
+    └── plugin.yml              # Metadados do plugin
+```
+
+### Tecnologias Utilizadas
+- **Java 17** - Linguagem principal
+- **Spigot API 1.18.2** - API do Minecraft
+- **HikariCP** - Pool de conexões
+- **SQLite/MySQL** - Banco de dados
+- **Gradle** - Build system
+
+## 🤝 Contribuição
+
+Contribuições são bem-vindas! Para contribuir:
+
+1. Fork o projeto
+2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
+3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
+4. Push para a branch (`git push origin feature/AmazingFeature`)
+5. Abra um Pull Request
+
+## 📝 Changelog
+
+### v2.0.0
+- ✨ Interface gráfica completamente redesenhada
+- 🗄️ Sistema de banco de dados (SQLite/MySQL)
+- 📋 Categorias e prioridades
+- 👥 Sistema de atribuição de tickets
+- 🔔 Notificações Discord
+- 🛡️ Sistema de cooldown e limites
+- 🔧 API completa para desenvolvedores
+- 📊 Sistema de estatísticas
+- 🎨 Melhorias visuais e de usabilidade
+
+### v1.0.0
+- 🎫 Sistema básico de tickets
+- 📖 Criação via livro
+- 👀 Visualização simples
+- ⚡ Funcionalidades essenciais
+
+## 📞 Suporte
+
+- **Discord**: [https://discord.gg/A4F9jtGhFU](https://discord.gg/A4F9jtGhFU)
+- **Issues**: Reporte bugs e sugestões nas Issues do GitHub
+- **Wiki**: Documentação detalhada na Wiki do projeto
+
+## 📄 Licença
+
+Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICENSE) para detalhes.
+
+## 🙏 Agradecimentos
+
+- Comunidade Spigot/Paper pelo suporte
+- Contribuidores do projeto
+- Servidores que testaram o plugin
+- Feedback da comunidade brasileira de Minecraft
+
+---
+
+**Desenvolvido com ❤️ por DevPlugins**
+
+*DevTicket v2.0 - Transformando o suporte do seu servidor!*
