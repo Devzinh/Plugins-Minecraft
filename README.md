@@ -1,6 +1,6 @@
-# DevTicket v2.0 - Sistema Avançado de Tickets
+# DevTicket - Sistema Avançado de Tickets
 
-![DevTicket Logo](https://img.shields.io/badge/DevTicket-v2.0-blue.svg)
+![DevTicket Logo](https://img.shields.io/badge/DevTicket-blue.svg)
 ![Minecraft](https://img.shields.io/badge/Minecraft-1.18.2-green.svg)
 ![Java](https://img.shields.io/badge/Java-17-orange.svg)
 
