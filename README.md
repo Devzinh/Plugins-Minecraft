@@ -1,196 +1,180 @@
-# 🎫 DevTicket - Sistema de Suporte Profissional para Minecraft
+# DevModt v1.0 - Sistema Profissional de MOTD Dinâmico
 
-## 🚀 **Meu Primeiro Plugin Lançado!**
+Plugin empresarial para Minecraft (Spigot 1.21+) desenvolvido pela **DevPlugins Team**. Sistema completo de gerenciamento de MOTD com recursos avançados, API pública, métricas de performance e banco de dados integrado.
 
-Olá pessoal! 👋 Estou muito animado em apresentar meu **primeiro plugin** para a comunidade brasileira de Minecraft! 
+## 🚀 Funcionalidades Profissionais
 
-Depois de muito trabalho e dedicação, criei o **DevTicket** - um sistema de suporte completo e profissional para servidores Minecraft.
+### Core Features
+- **Rotação Automática Inteligente**: Sistema avançado de rotação com priorização
+- **Detecção de Clima Avançada**: Suporte completo a todos os tipos de clima
+- **Eventos Especiais Automáticos**: Natal, Halloween, Ano Novo com detecção automática
+- **Eventos Customizados**: Sistema completo de criação e gerenciamento
+- **Análise de Jogadores**: MOTDs baseados em faixas de jogadores online
+- **Sistema de Horários**: Mensagens específicas por período do dia
 
----
+### Recursos Avançados
+- **API Pública**: Integração com outros plugins via API completa
+- **Banco de Dados SQLite**: Histórico completo e estatísticas
+- **Sistema de Métricas**: Performance e analytics em tempo real
+- **Placeholders Avançados**: 20+ placeholders incluindo TPS, CPU, memória
+- **Placeholders Customizados**: Registre seus próprios placeholders
+- **Verificação de Atualizações**: Sistema automático de update checking
+- **Logs Detalhados**: Sistema completo de logging e debugging
 
-## 🎯 **O que é o DevTicket?**
+### Performance & Segurança
+- **Processamento Assíncrono**: Zero impacto na performance do servidor
+- **Cache Inteligente**: Sistema de cache para otimização
+- **Rate Limiting**: Proteção contra spam de atualizações
+- **Validação de Dados**: Validação completa de configurações
 
-O DevTicket é um plugin de sistema de tickets moderno e intuitivo que permite aos jogadores reportarem problemas, fazerem sugestões e receberem suporte de forma organizada através de uma **interface gráfica linda e funcional**.
+## 🎮 Comandos Profissionais
 
-### ✨ **Principais Funcionalidades:**
+### Comandos Básicos
+- `/devmotd reload` - Recarrega configurações
+- `/devmotd preview` - Preview do MOTD atual
+- `/devmotd info` - Informações do plugin
 
-#### 🎮 **Para Jogadores:**
-- 📝 **Criação fácil de tickets** através de GUI intuitiva
-- 🏷️ **Categorias organizadas**: Suporte Técnico, Denúncias, Sugestões, Bugs
-- ⚡ **Sistema de prioridades**: Baixa, Média, Alta, Urgente
-- 📱 **Interface moderna** com menus navegáveis
-- 💬 **Sistema de comentários** em tempo real
-- 📊 **Acompanhamento do status** dos seus tickets
+### Gerenciamento de Eventos
+- `/devmotd setevent <nome> [mensagem]` - Criar evento customizado
+- `/devmotd clearevent` - Remover evento atual
 
-#### 👨‍💼 **Para Staff:**
-- 🎛️ **Painel administrativo completo**
-- 👤 **Sistema de atribuição** de tickets
-- 📋 **Gestão de status**: Aberto, Em Andamento, Fechado
-- 🔄 **Reabrir tickets** quando necessário
-- 📈 **Estatísticas detalhadas**
-- 🔔 **Notificações automáticas**
+### Analytics & Métricas
+- `/devmotd stats` - Estatísticas de hoje
+- `/devmotd metrics` - Métricas de performance
+- `/devmotd history [limite]` - Histórico de atualizações
 
----
+### Placeholders Avançados
+- `/devmotd placeholder list` - Listar placeholders customizados
+- `/devmotd placeholder add <nome> <valor>` - Adicionar placeholder
+- `/devmotd placeholder remove <nome>` - Remover placeholder
 
-## 🛡️ **Tecnologia de Ponta - Sistema Anti-Spam**
+### Ferramentas de Desenvolvimento
+- `/devmotd test <mensagem>` - Testar processamento de mensagem
+- `/devmotd update` - Verificar atualizações
 
-### 🚫 **Proteção Total Contra Spam:**
-- ⏱️ **Cooldown inteligente** - 3 segundos entre ações no mesmo ticket
-- 🛑 **Bloqueio de cliques múltiplos** - Previne spam visual
-- 🔒 **Validações rigorosas** - Todas as ações são verificadas
-- 📢 **Controle de notificações** - Sem spam no Discord
+**Aliases**: `/dmotd`, `/dynamicmotd`
 
-### 🎯 **Controle de Qualidade:**
-- ✅ **Tickets só fecham com responsável** - Garante qualidade no atendimento
-- 👥 **Sistema de atribuição obrigatório** - Responsabilidade clara
-- 🔄 **Desatribuição inteligente** - Flexibilidade para a equipe
-- 📝 **Comentários controlados** - Apenas em tickets atribuídos
+## Permissões
 
----
+- `devmotd.admin` - Permite usar todos os comandos (padrão: OP)
 
-## 🎨 **Interface Profissional**
+## 📊 Placeholders Disponíveis
 
-### 🖥️ **Menus Intuitivos:**
+### Básicos
+- `{players_online}` - Jogadores online
+- `{max_players}` - Máximo de jogadores
+- `{weather}` - Clima atual
+- `{event_name}` - Nome do evento ativo
+- `{time}` - Hora atual (HH:mm)
+- `{date}` - Data atual (dd/MM/yyyy)
+- `{full_date}` - Data e hora completa
+- `{uptime}` - Tempo de atividade
+
+### Servidor
+- `{server_name}` - Nome do servidor
+- `{server_version}` - Versão do servidor
+- `{bukkit_version}` - Versão do Bukkit
+- `{world_count}` - Número de mundos
+- `{plugin_count}` - Número de plugins
+
+### Performance
+- `{tps}` - TPS atual do servidor
+- `{memory_used}` - Memória RAM usada
+- `{memory_max}` - Memória RAM máxima
+- `{cpu_usage}` - Uso de CPU
+
+### Tempo
+- `{day_of_week}` - Dia da semana
+- `{month}` - Mês atual
+- `{year}` - Ano atual
+
+### Customizados
+Registre seus próprios placeholders via comando ou API!
+
+## Configuração
+
+O arquivo `config.yml` permite configurar:
+
+- Intervalo de rotação das mensagens
+- Mensagens por clima, horário e número de jogadores
+- Eventos especiais com datas específicas
+- Ativação/desativação de funcionalidades
+- Logs no console
+
+## Instalação
+
+1. Compile o plugin com `./gradlew build`
+2. Copie o arquivo `.jar` gerado para a pasta `plugins/` do servidor
+3. Reinicie o servidor
+4. Configure o arquivo `config.yml` conforme necessário
+5. Use `/devmotd reload` para aplicar mudanças
+
+## Desenvolvimento
+
+- **Java**: 21+
+- **API**: Spigot 1.21
+- **Build**: Gradle
+
+### Estrutura do Projeto
+
 ```
-🏠 Menu Principal
-├── 🆕 Criar Novo Ticket
-├── 📋 Meus Tickets  
-├── 📊 Minhas Estatísticas
-├── ❓ Ajuda & Informações
-└── 🛠️ Painel de Staff (Staff)
+src/main/java/me/devplugins/devModt/
+├── DevModt.java              # Classe principal
+├── commands/
+│   └── CommandHandler.java   # Gerenciamento de comandos
+├── listeners/
+│   └── WeatherListener.java  # Eventos de clima
+├── managers/
+│   ├── ConfigManager.java    # Gerenciamento de configuração
+│   ├── EventManager.java     # Gerenciamento de eventos
+│   └── MOTDManager.java      # Lógica principal do MOTD
+└── utils/
+    └── Scheduler.java        # Agendamento de tarefas
 ```
 
-### 🎪 **Experiência Visual:**
-- 🌈 **Cores organizadas** por categoria e prioridade
-- 🎯 **Ícones intuitivos** para cada função
-- 📱 **Layout responsivo** e organizado
-- ✨ **Animações suaves** e feedback visual
+## 🔧 API para Desenvolvedores
+
+O DevModt v1.0 inclui uma API completa para integração com outros plugins:
+
+```java
+// Forçar atualização do MOTD
+DevModtAPI.forceUpdateMOTD();
+
+// Definir evento customizado
+DevModtAPI.setCustomEvent("Meu Evento", "&c&lEVENTO ESPECIAL!");
+
+// Registrar placeholder customizado
+DevModtAPI.registerPlaceholder("meu_placeholder", "Valor");
+
+// Obter MOTD atual
+String motd = DevModtAPI.getCurrentMOTD();
+```
+
+## 📈 Métricas e Analytics
+
+- **Histórico Completo**: Todas as atualizações são registradas
+- **Estatísticas Diárias**: Métricas automáticas por dia
+- **Performance Monitoring**: TPS, CPU, memória em tempo real
+- **Relatórios Detalhados**: Análise completa via comandos
+
+## 🏢 Versão Empresarial
+
+Esta é a versão profissional do DevModt, desenvolvida pela **DevPlugins Team** com:
+
+- ✅ Suporte técnico prioritário
+- ✅ Atualizações regulares
+- ✅ API completa para desenvolvedores
+- ✅ Documentação detalhada
+- ✅ Sistema de métricas avançado
+- ✅ Banco de dados integrado
+
+## 📞 Suporte Profissional
+
+- **Discord**: https://discord.gg/A4F9jtGhFU
+- **GitHub**: https://github.com/Devzinh/Plugins-Minecraft
+- **Documentação**: Wiki completa disponível
+- **Suporte 24/7**: Para clientes empresariais
 
 ---
 
-## ⚙️ **Especificações Técnicas**
-
-### 🔧 **Compatibilidade:**
-- 🎮 **Minecraft**: 1.18.2+
-- 🔌 **Plataforma**: Spigot/Paper
-- ☕ **Java**: 17+
-- 🛠️ **Build**: Gradle
-
-### 🗄️ **Recursos Avançados:**
-- 💾 **Banco de dados** integrado
-- 🔄 **Sistema assíncrono** - Performance otimizada
-- 🎯 **Cache inteligente** - Velocidade máxima
-- 🔐 **Sistema de permissões** completo
-- 🌐 **Suporte ao Discord** (webhook)
-
----
-
-## 📈 **Por que Escolher o DevTicket?**
-
-### 🏆 **Vantagens Competitivas:**
-
-#### ✅ **Profissionalismo:**
-- 🎯 Interface limpa e moderna
-- 📋 Organização total dos tickets
-- 👥 Gestão eficiente da equipe
-
-#### ✅ **Facilidade de Uso:**
-- 🎮 Jogadores criam tickets em segundos
-- 🛠️ Staff gerencia tudo pela GUI
-- 📱 Navegação intuitiva
-
-#### ✅ **Tecnologia Avançada:**
-- 🚫 Sistema anti-spam robusto
-- ⚡ Performance otimizada
-- 🔒 Segurança total
-
-#### ✅ **Suporte Brasileiro:**
-- 🇧🇷 Desenvolvido no Brasil
-- 💬 Suporte em português
-- 🤝 Comunidade ativa
-
----
-
-## 🎊 **Lançamento Especial!**
-
-### 🎁 **Oferta de Estreia:**
-Como é meu **primeiro plugin**, estou oferecendo condições especiais para os primeiros servidores que adotarem o DevTicket!
-
-### 📞 **Entre em Contato:**
-- 💬 **Discord**: https://discord.gg/bdxGxCbqCj
-- 🛒 **Loja**: Em breve!
-- 📧 **Suporte**: Direto pelo Discord
-
----
-
-## 🎯 **Ideal Para:**
-
-### 🏰 **Tipos de Servidor:**
-- 🎮 **Survival** - Suporte a jogadores
-- ⚔️ **PvP** - Denúncias e reports
-- 🏗️ **Creative** - Sugestões e bugs
-- 🎪 **Network** - Gestão centralizada
-- 🎲 **Mini-games** - Feedback dos jogadores
-
-### 👥 **Tamanhos de Comunidade:**
-- 🏠 **Pequenos** (10-50 jogadores)
-- 🏢 **Médios** (50-200 jogadores)  
-- 🏭 **Grandes** (200+ jogadores)
-
----
-
-## 🔥 **Depoimentos da Comunidade**
-
-> *"Finalmente um sistema de tickets brasileiro que funciona de verdade!"*
-> 
-> *"A interface é linda e super fácil de usar!"*
-> 
-> *"O sistema anti-spam salvou nosso servidor do caos!"*
-
----
-
-## 🚀 **Próximos Passos**
-
-### 📅 **Roadmap 2025:**
-- 🌐 **Integração Discord** completa
-- 📊 **Dashboard web** para administradores
-- 🔔 **Notificações push** 
-- 🎨 **Temas personalizáveis**
-- 🌍 **Multi-idioma**
-
----
-
-## 💝 **Agradecimentos**
-
-Quero agradecer toda a **comunidade brasileira de plugins** que me inspirou a começar nessa jornada! 
-
-Este é apenas o **primeiro de muitos plugins** que pretendo desenvolver. Seu feedback e suporte são fundamentais para continuar criando soluções incríveis para nossa comunidade!
-
----
-
-## 📞 **Vamos Conversar!**
-
-### 🎮 **Interessado no DevTicket?**
-- 💬 **Entre no Discord**: https://discord.gg/bdxGxCbqCj
-- 🤝 **Vamos conversar** sobre como o DevTicket pode transformar seu servidor
-- 🎁 **Condições especiais** para early adopters
-- 🛠️ **Suporte personalizado** durante a implementação
-
-### 🏪 **Minha Loja de Plugins**
-O DevTicket é apenas o começo! Em breve, uma loja completa com plugins exclusivos e de alta qualidade para a comunidade brasileira.
-
----
-
-## 🎯 **Call to Action**
-
-### 🚀 **Não Perca Essa Oportunidade!**
-
-Se você quer um **sistema de suporte profissional** que realmente funciona, com **tecnologia brasileira** e **suporte dedicado**, o DevTicket é para você!
-
-**👆 Clique no link do Discord e vamos conversar!**
-
----
-
-*Desenvolvido com ❤️ no Brasil para a comunidade brasileira de Minecraft*
-
-**#MinecraftBrasil #PluginsBR #DevTicket #SistemaDeSuporte #MinecraftPlugins**
+**DevModt v1.0** - Desenvolvido com ❤️ pela **DevPlugins Team**
