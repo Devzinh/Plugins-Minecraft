@@ -60,7 +60,7 @@ Plugin empresarial para Minecraft (Spigot 1.21+) desenvolvido pela **DevPlugins 
 
 ## 🎮 Eventos Pré-Configurados
 
-O DevModt v2.0 inclui eventos prontos para usar! Basta digitar `/devmotd setevent <nome>`:
+O DevModt v1.0 inclui eventos prontos para usar! Basta digitar `/devmotd setevent <nome>`:
 
 ### Eventos Disponíveis
 - **gladiador** - `⚔️🛡️ GLADIADOR! ⚔️️️🛡️` - Evento de combate PvP
@@ -198,7 +198,7 @@ src/main/java/me/devplugins/devModt/
 
 ## 🔧 API para Desenvolvedores
 
-O DevModt v2.0 inclui uma API completa para integração com outros plugins:
+O DevModt v1.0 inclui uma API completa para integração com outros plugins:
 
 ### Controle de MOTD
 ```java
@@ -268,7 +268,7 @@ Veja `API_EXAMPLE.md` para exemplos completos de integração.
 - **Exportação**: Dados acessíveis via API
 - **Logs Estruturados**: Sistema de logging profissional
 
-## 🏢 Versão Empresarial v2.0
+## 🏢 Versão Empresarial v1.0
 
 Esta é a versão profissional do DevModt, desenvolvida pela **DevPlugins Team** com:
 
@@ -289,7 +289,7 @@ Esta é a versão profissional do DevModt, desenvolvida pela **DevPlugins Team**
 - ✅ **Compatibilidade Garantida**: Testado em servidores grandes
 - ✅ **Customização**: Eventos e configurações personalizadas
 
-## 🚀 Novidades da v2.0
+## 🚀 Novidades da v1.0
 
 ### ✨ Eventos Pré-Configurados
 - **8+ eventos prontos**: Gladiador, PvP, Build, MiniGames, Economia e mais
@@ -314,20 +314,8 @@ Esta é a versão profissional do DevModt, desenvolvida pela **DevPlugins Team**
 - **GitHub**: https://github.com/Devzinh/DevModt
 - **Documentação**: Wiki completa com exemplos
 - **Suporte Prioritário**: Resposta garantida em 24h
-- **Comunidade**: Mais de 1000+ servidores usando
-
-## 📋 Changelog v2.0
-
-- ✅ **Eventos Pré-Configurados**: Sistema completo implementado
-- ✅ **Performance**: Cache inteligente e processamento assíncrono
-- ✅ **API**: Expandida com novos métodos e eventos
-- ✅ **Banco de Dados**: SQLite para persistência e analytics
-- ✅ **Comandos**: 4 novos comandos adicionados
-- ✅ **Placeholders**: 10+ novos placeholders avançados
-- ✅ **Logs**: Sistema de logging profissional
-- ✅ **Compatibilidade**: Melhor integração com outros plugins
 
 ---
 
-**DevModt v2.0** - O Sistema de MOTD Mais Avançado do Minecraft  
+**DevModt v1.0** - O Sistema de MOTD Mais Avançado do Minecraft  
 Desenvolvido com ❤️ pela **DevPlugins Team**
