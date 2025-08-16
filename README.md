@@ -64,10 +64,6 @@ O DevModt v1.0 inclui eventos prontos para usar! Basta digitar `/devmotd seteven
 
 ### Eventos Disponíveis
 - **gladiador** - `⚔️🛡️ GLADIADOR! ⚔️️️🛡️` - Evento de combate PvP
-- **pvp** - `⚔️ EVENTO PVP! ⚔️` - Evento de batalhas
-- **build** - `🏗️ EVENTO BUILD! 🏗️` - Evento de construção
-- **minigames** - `🎮 MINIGAMES! 🎮` - Evento de mini-jogos
-- **economia** - `💰 EVENTO ECONOMIA! 💰` - Evento econômico
 - **natal** - `🎄 FELIZ NATAL! 🎄` - Evento de Natal (automático 20-26/12)
 - **halloween** - `🎃 HALLOWEEN! 🎃` - Evento de Halloween (automático 28/10-01/11)
 - **ano_novo** - `🎆 FELIZ ANO NOVO! 🎆` - Evento de Ano Novo (automático 31/12-02/01)
@@ -129,8 +125,6 @@ Registre seus próprios placeholders via comando ou API!
 O arquivo `config.yml` permite configurar:
 
 ### Configurações Básicas
-- Intervalo de rotação das mensagens
-- Mensagens por clima, horário e número de jogadores
 - Eventos especiais com datas específicas
 - Ativação/desativação de funcionalidades
 - Logs detalhados no console
@@ -247,8 +241,6 @@ PerformanceMetrics metrics = DevModtAPI.getPerformanceMetrics();
 double avgTime = metrics.getAverageProcessingTime();
 ```
 
-Veja `API_EXAMPLE.md` para exemplos completos de integração.
-
 ## 📈 Métricas e Analytics Profissionais
 
 ### Sistema de Banco de Dados
@@ -268,10 +260,6 @@ Veja `API_EXAMPLE.md` para exemplos completos de integração.
 - **Exportação**: Dados acessíveis via API
 - **Logs Estruturados**: Sistema de logging profissional
 
-## 🏢 Versão Empresarial v1.0
-
-Esta é a versão profissional do DevModt, desenvolvida pela **DevPlugins Team** com:
-
 ### Recursos Enterprise
 - ✅ **Eventos Pré-Configurados**: 8+ eventos prontos para usar
 - ✅ **API Completa**: Integração avançada com outros plugins
@@ -281,32 +269,6 @@ Esta é a versão profissional do DevModt, desenvolvida pela **DevPlugins Team**
 - ✅ **Processamento Assíncrono**: Zero impacto no servidor
 - ✅ **Verificação de Atualizações**: Sistema automático
 - ✅ **Logs Detalhados**: Sistema de logging estruturado
-
-### Suporte Profissional
-- ✅ **Suporte Técnico Prioritário**: Resposta em até 24h
-- ✅ **Atualizações Regulares**: Novas funcionalidades mensais
-- ✅ **Documentação Completa**: Guias e exemplos detalhados
-- ✅ **Compatibilidade Garantida**: Testado em servidores grandes
-- ✅ **Customização**: Eventos e configurações personalizadas
-
-## 🚀 Novidades da v1.0
-
-### ✨ Eventos Pré-Configurados
-- **8+ eventos prontos**: Gladiador, PvP, Build, MiniGames, Economia e mais
-- **Ativação instantânea**: `/devmotd setevent gladiador` ativa automaticamente
-- **Tab completion inteligente**: Sugere eventos disponíveis
-- **Mensagens personalizadas**: Cada evento com design único
-
-### 🔧 Melhorias Técnicas
-- **Performance otimizada**: Cache inteligente e processamento assíncrono
-- **API expandida**: Novos métodos para desenvolvedores
-- **Banco de dados**: SQLite integrado para persistência
-- **Métricas avançadas**: Sistema completo de analytics
-
-### 🎯 Facilidade de Uso
-- **Comandos simplificados**: Menos digitação, mais funcionalidade
-- **Interface melhorada**: Mensagens mais claras e organizadas
-- **Documentação expandida**: Guias completos e exemplos práticos
 
 ## 📞 Suporte Profissional
 
