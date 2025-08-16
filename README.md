@@ -311,7 +311,7 @@ Esta é a versão profissional do DevModt, desenvolvida pela **DevPlugins Team**
 ## 📞 Suporte Profissional
 
 - **Discord**: https://discord.gg/A4F9jtGhFU
-- **GitHub**: https://github.com/devplugins/devmodt
+- **GitHub**: https://github.com/Devzinh/DevModt
 - **Documentação**: Wiki completa com exemplos
 - **Suporte Prioritário**: Resposta garantida em 24h
 - **Comunidade**: Mais de 1000+ servidores usando
